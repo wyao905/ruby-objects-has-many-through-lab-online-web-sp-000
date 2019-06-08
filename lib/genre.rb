@@ -12,4 +12,8 @@ class Genre
   def songs
     @songs
   end
+  
+  def self.all
+    @@all
+  end
 end
