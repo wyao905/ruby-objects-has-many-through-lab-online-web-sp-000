@@ -10,6 +10,7 @@ class Artist
     @name = name
     @songs = []
     @@all << self
+    @all_genres
   end
   
   def new_song(name, genre)
@@ -20,7 +21,7 @@ class Artist
   
   def genres
     songs.each do |song|
-      Genre.all << song.genre if !Genre.all.include?(song.genre)
+      # Genre.all << song.genre if !Genre.all.include?(song.genre)
       all_genres << song.genre if !all_genres.include?(song.genre)
     end
     all_genres
