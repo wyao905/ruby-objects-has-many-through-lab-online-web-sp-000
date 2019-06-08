@@ -3,8 +3,8 @@ class Genre
   
   @@all = []
   
-  def initialize(name)
-    @name = name
+  def initialize(song)
+    @name = song.name
     @@all << self
     @songs = []
   end
