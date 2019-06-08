@@ -5,12 +5,12 @@ class Doctor
   
   def initialize(name)
     @name = name
-    all << self
+    Doctor.all << self
   end
   
   def new(doc_name)
     name = doc_name
-    all << self
+    Doctor.all << self
   end
   
   def self.all
