@@ -6,7 +6,10 @@ class Song
   def initialize(name, artist, genre)
     @name = name
     @artist = artist
-    @genre = Genre.new(genre) if !Genre.all.include?(genre)
+    if !Genre.all.include?(genre)
+      @genre = Genre.new(genre)
+    else
+      @genre = 
     @@all << self
   end
   
