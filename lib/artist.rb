@@ -19,7 +19,7 @@ class Artist
   end
   
   def genres
-    songs.each {|song| Genres.all << song.genre if !Genres.all.include?(song.genre)}
+    songs.each {|song| Genre.all << song.genre if !Genre.all.include?(song.genre)}
     all_genres
   end
   
