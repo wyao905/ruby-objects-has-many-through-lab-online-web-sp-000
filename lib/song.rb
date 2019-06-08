@@ -9,7 +9,8 @@ class Song
     if !Genre.all.include?(genre)
       @genre = Genre.new(genre)
     else
-      @genre = 
+      @genre = genre
+    end
     @@all << self
   end
   
