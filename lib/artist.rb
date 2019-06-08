@@ -2,7 +2,7 @@ require 'pry'
 
 class Artist
   attr_accessor :name
-  attr_reader :songs
+  attr_reader :songs, :all_genres
   
   @@all = []
   
@@ -19,7 +19,10 @@ class Artist
   end
   
   def genres
-    songs.each {|song| Genre.all << song.genre if !Genre.all.include?(song.genre)}
+    songs.each do |song|
+      Genre.all << song.genre if !Genre.all.include?(song.genre)
+      all_genres << song.genre if !all_genres.include?(song.genre)
+    end
     all_genres
   end
   
