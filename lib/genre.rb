@@ -10,6 +10,5 @@ class Genre
   end
   
   def songs
-    @@all
   end
 end
