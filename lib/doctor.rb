@@ -8,7 +8,9 @@ class Doctor
     all << self
   end
   
-  def new(name)
+  def new(doc_name)
+    name = doc_name
+    all << self
   end
   
   def self.all
