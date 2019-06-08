@@ -14,4 +14,8 @@ class Patient
     appointments << n_a
     n_a
   end
+  
+  def self.all
+    @@all
+  end
 end
