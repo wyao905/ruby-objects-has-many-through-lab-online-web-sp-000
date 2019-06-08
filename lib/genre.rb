@@ -10,7 +10,7 @@ class Genre
   end
   
   def songs
-    @songs
+    @songs.each {|song|
   end
   
   def self.all
